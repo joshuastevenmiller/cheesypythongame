@@ -1,0 +1,38 @@
+print("Welcome to my first game!")
+def start():
+	name = input("What's your name?")
+	answer = input("Hello," + name + "," + "do you want to play a game? y or n")
+	if answer == "y":
+		character = input("This is a fantasy story. You can choose to be a knight or a dragon. Please enter knight or dragon")
+		if character == "knight":
+			path = input("You are a knight, walking through a dark forest. You come across a fork in the path. Do you go right or left?")
+			if path == "right":
+				weapon = input("You go right. Suddenly you come across two weapons in the road! One is a sword, and the other is a bow with arrows. Which do you choose, sword or bow?")
+				if weapon == "sword":
+					print("wrong choice! The sword had an IED attached. Bummer.")
+					start()
+				elif weapon == "bow":
+					print("Dummy. You missed the fact that the bow was boobie trapped. u r dead.")
+					start()
+				else:
+					print("That wasn't an acceptable answer. Back to the beginning with you.")
+					start()
+			elif path == "left":
+				print("Whoops. You got eaten by a dragon.")
+				start()
+			else:
+				print("That wasn't an acceptable answer. Back to the beginning with you.")
+				start()
+		elif character == "dragon":
+			print("Dragons aren't real, dummy. Game over.")
+			start()
+		else:
+			print("That wasn't an acceptable answer. Back to the beginning with you.")
+			start()
+	elif answer == "n":
+		print ("Ok, goodbye!")
+		start()
+	else:
+		print("That wasn't an acceptable answer. Back to the beginning with you.")
+		start()
+
